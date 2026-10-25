@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="#1a73e8"/>
+  <!-- house -->
+  <path d="M14 62 L44 34 L74 62 L66 62 L66 94 L22 94 L22 62 Z" fill="#fff"/>
+  <rect x="38" y="72" width="12" height="22" fill="#1a73e8"/>
+  <!-- arrow leading away -->
+  <path d="M70 80 H96" stroke="#fff" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <path d="M92 62 L116 80 L92 98 Z" fill="#fff" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+</svg>

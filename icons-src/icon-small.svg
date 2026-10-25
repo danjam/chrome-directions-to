@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <rect x="0" y="0" width="16" height="16" rx="3" fill="#1a73e8"/>
+  <!-- house: pixel-aligned, no door -->
+  <path d="M1 8 L4.5 4.5 L8 8 H7 V12 H2 V8 Z" fill="#fff"/>
+  <!-- thick arrow, 1px gap from house -->
+  <rect x="8" y="9" width="4" height="2" fill="#fff"/>
+  <path d="M11 6 L15 10 L11 14 Z" fill="#fff"/>
+</svg>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Directions To</title>
+  <style>
+    body { font: 14px system-ui, sans-serif; max-width: 480px; margin: 24px; }
+    label { display: block; margin-top: 14px; font-weight: 600; }
+    input, select { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
+    small { color: #666; font-weight: normal; }
+    button { margin-top: 18px; padding: 6px 14px; }
+    #status { margin-left: 10px; color: green; }
+    .row { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+    .row select, .row input[type=time] { width: auto; margin-top: 0; }
+    label.inline { display: inline-flex; align-items: center; gap: 4px; margin: 0; font-weight: normal; }
+    label.inline input { width: auto; margin: 0; }
+    .row + small { display: block; margin-top: 4px; }
+    .place { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+    .place input[type=radio] { width: auto; margin: 0; }
+    .place .name { width: 110px; margin: 0; }
+    .place .addr { flex: 1; margin: 0; }
+    .place button { margin: 0; padding: 4px 8px; }
+    button.small { margin-top: 8px; padding: 4px 10px; }
+  </style>
+</head>
+<body>
+  <h2>Directions To</h2>
+
+  <label>Places to leave from <small>(● = default)</small></label>
+  <div id="places"></div>
+  <button id="addPlace" type="button" class="small">+ Add place</button>
+
+  <label>Region suffix <small>(appended to selections to disambiguate, e.g. "UK" or "West Yorkshire")</small>
+    <input id="suffix" placeholder="UK">
+  </label>
+
+  <label>Travel mode
+    <select id="mode">
+      <option value="transit">Transit</option>
+      <option value="walking">Walking</option>
+      <option value="bicycling">Cycling</option>
+      <option value="driving">Driving</option>
+    </select>
+  </label>
+
+  <label>Departure</label>
+  <div class="row">
+    <label class="inline"><input type="radio" name="when" value="now"> Leave now</label>
+    <label class="inline"><input type="radio" name="when" value="next"> Next</label>
+    <select id="day">
+      <option value="1">Monday</option>
+      <option value="2">Tuesday</option>
+      <option value="3">Wednesday</option>
+      <option value="4">Thursday</option>
+      <option value="5">Friday</option>
+      <option value="6">Saturday</option>
+      <option value="0">Sunday</option>
+    </select>
+    <span>at</span>
+    <input id="time" type="time">
+  </div>
+  <small>"Next" includes today if that time hasn't passed yet.</small>
+
+  <button id="save">Save</button><span id="status"></span>
+
+  <p><small>Stored locally in this browser only. Usage: highlight a town/place on any page → right-click → "Directions from …". Routes start from the default place.</small></p>
+
+  <script src="options.js"></script>
+</body>
+</html>
